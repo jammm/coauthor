@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "6.9.1"
+
+before_install:
+  - "curl https://install.meteor.com | /bin/sh"
+  - "npm install -g coffee-script"
+  - "npm install -g spacejam"
+  # - "export PHANTOMJS_CDNURL=http://cnpmjs.org/downloads"
+  # - "npm install -g phantomjs-prebuilt"
+  - "export PATH=$PATH:$HOME/.meteor"
+
+script: "spacejam test-packages ./"
